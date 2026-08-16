@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>GoMobi</title>
+</head>
+<body>
+  <script src="js/auth.js"></script>
+  <script>
+    // pag inicial só decide pra onde mandar o user: se estiver logado vai pro dashboard, senão vai pro login
+    if (getUsuarioLogado()) {
+      window.location.href = 'dashboard.html';
+    } else {
+      window.location.href = 'login.html';
+    }
+  </script>
+</body>
+</html>

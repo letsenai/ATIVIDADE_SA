@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GoMobi — Login</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Lato:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="auth-page">
+    <div class="auth-card">
+      <img src="assets/logo.png" alt="GoMobi" class="logo-mark" />
+      <h1 class="auth-title">Welcome back</h1>
+      <p class="auth-subtitle">Login to your GoMobi account</p>
+
+      <form class="auth-form" id="form-login">
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="admin@gomobi.com" />
+        </div>
+        <div class="field">
+          <label for="senha">Password</label>
+          <input type="password" id="senha" placeholder="Enter your password" />
+        </div>
+
+        <p class="form-error" id="mensagem-erro" style="display: none;"></p>
+
+        <button type="submit" class="btn btn-primary btn-full">Login</button>
+      </form>
+
+      <p class="auth-footer">
+        Don't have an account? <a href="signup.html">Sign up</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script>
+    // se ja tiver alguem logado, pula direto pro dashboard
+    if (getUsuarioLogado()) {
+      window.location.href = 'dashboard.html';
+    }
+
+    const form = document.getElementById('form-login');
+    const mensagemErro = document.getElementById('mensagem-erro');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault(); // evita recarregar a pag ao enviar o form
+
+      const email = document.getElementById('email').value.trim();
+      const senha = document.getElementById('senha').value;
+
+      mensagemErro.style.display = 'none';
+
+      if (!email || !senha) {
+        mensagemErro.textContent = 'Preencha email e senha.';
+        mensagemErro.style.display = 'block';
+        return;
+      }
+
+      const erro = fazerLogin(email, senha);
+      if (erro) {
+        mensagemErro.textContent = erro;
+        mensagemErro.style.display = 'block';
+      } else {
+        window.location.href = 'dashboard.html';
+      }
+    });
+  </script>
+</body>
+</html>

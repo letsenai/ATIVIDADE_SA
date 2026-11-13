@@ -1,7 +1,7 @@
 # Sistema de Monitoramento Ferroviário (Ferrorama / GoMobi)
 
 ## Equipe
-Letícia de Lima Alves, Flávia Faust, Eduardo Tadeu e Bryan Tavares — Turma: _[preencher]_.
+Letícia de Lima Alves, Flávia Faust, Eduardo Tadeu e Bryan Tavares - Turma: DS24/M6.
 Repositório: https://github.com/letsenai/ATIVIDADE_SA
 
 ## O que o sistema faz

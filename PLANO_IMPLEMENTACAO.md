@@ -1,4 +1,4 @@
-# PLANO DE IMPLEMENTAÇÃO — Ferrorama / GoMobi
+# PLANO DE IMPLEMENTAÇÃO - Ferrorama / GoMobi
 
 ## 1. Identificação e visão geral
 **Equipe GoMobi:** Letícia de Lima Alves, Flávia Faust, Eduardo Tadeu, Bryan Tavares
@@ -42,12 +42,12 @@ Separar `config`, `includes` e `assets` permite que cada integrante trabalhe num
 1. Mockup (Canva) → 2. Plano → 3. Telas em HTML/CSS/JS com dados simulados → 4. Cronograma e Kanban → 5. Conexão, login e cadastro (PHP + MySQL) → 6. Persistência, logout, gestão de trens e sensores → 7. Rotas, leituras e alertas → 8. Relatórios e ajustes → Entrega final.
 
 ## 5. Fluxos de navegação
-- **Novo usuário:** Login → Sign up → Login → Dashboard.
-- **Recuperar senha:** Login → Forgot password → link → nova senha → Login.
-- **Operador:** Login → Dashboard → Trens → Detalhe do trem → Alertas.
-- **Técnico:** Login → Sensores → filtrar por tipo/status → analisar.
-- **Administrador:** Login → Users → Register User (escolhe o perfil).
-- **Todos:** menu do usuário → Logout → Login.
+- **Novo usuário:** Login > Sign up > Login > Dashboard.
+- **Recuperar senha:** Login > Forgot password > link > nova senha > Login.
+- **Operador:** Login > Dashboard > Trens > Detalhe do trem > Alertas.
+- **Técnico:** Login > Sensores > filtrar por tipo/status > analisar.
+- **Administrador:** Login > Users > Register User (escolhe o perfil).
+- **Todos:** menu do usuário > Logout > Login.
 
 ## 6. Perfis e permissões
 | Página | Administrador | Operador | Técnico |

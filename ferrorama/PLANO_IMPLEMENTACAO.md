@@ -3,8 +3,7 @@
 ## 1. Identificação e visão geral
 **Equipe GoMobi:** Letícia de Lima Alves, Flávia Faust, Eduardo Tadeu, Bryan Tavares
 **Repositório:** https://github.com/letsenai/ATIVIDADE_SA
-**Mockup mobile:** https://canva.link/a19mz1jpvr9b3z8
-**Mockup desktop:** https://canva.link/r20ptvlegvo51mw
+**Mockup:** [https://canva.link/a19mz1jpvr9b3z8](https://canva.link/j64jjppfi1mdbbo)
 
 Sistema web de monitoramento ferroviário para operadores, técnicos e administradores acompanharem trens, sensores, rotas e alertas em um só lugar.
 

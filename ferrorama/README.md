@@ -1,4 +1,4 @@
-# Ferrorama / GoMobi — Como rodar
+# Ferrorama / GoMobi - Como rodar
 
 1. Instale o **XAMPP** e, no painel, inicie **Apache** e **MySQL**.
 2. Copie esta pasta para `C:\xampp\htdocs\ferrorama`.

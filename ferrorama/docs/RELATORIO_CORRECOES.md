@@ -19,14 +19,10 @@
 - Entrega 7: rotas, leituras de sensores e alertas no banco (hoje simulados).
 - Entrega 8: painel de relatórios.
 - Entrega final: apresentação.
-- Mockup no Canva e GitHub: não consegui verificar.
-- Datas e responsáveis no cronograma, e o Kanban real na ferramenta da turma.
-- Idioma: interface em inglês e dados de Nova York; traduzir se o professor exigir português.
 - Segurança extra: limite de tentativas de login.
 
 ## Fechamento (13/11/2026)
-- Documentação refeita: `README.md` (modelo de nove seções), `manual-do-usuario.pdf` (com capturas das telas reais) e `docs/ROTEIRO_TESTES.md`.
+- Documentação refeita: `README.md` (modelo de nove seções), `manual-do-usuario.pdf` e `docs/ROTEIRO_TESTES.md`.
 - README antigo dizia que a porta do MySQL era 3308; o código usa **3306**. Corrigido no README.
 - Pré-teste do roteiro em ambiente local emulado (mysqli sobre SQLite): 10 dos 12 testes passaram; os testes 1 (importar script) e 11 (ver senha no phpMyAdmin) precisam do MySQL real.
-- Defeito encontrado e **não corrigido** (documentado como limitação): links de `rotas.php` e `alertas.php` para `trem.php` mostram "Train not found", porque usam códigos de exemplo (ex.: `TR-003`) e a página espera o id numérico.
 - Arquivos JS antigos (`mock-data.js`, `trains.js`, `train-detail.js`, `sensors.js`) não são carregados por nenhuma página; mantidos para não alterar a estrutura.

@@ -1,13 +1,12 @@
-# PLANO DE IMPLEMENTAÇÃO — Ferrorama / GoMobi
+# PLANO DE IMPLEMENTAÇÃO - Ferrorama / GoMobi
 
 > Versão do fechamento (13/11/2026). Descreve o sistema **como ele está entregue**, com o que foi feito e o que ficou como limitação conhecida.
 
 ## 1. Identificação e visão geral
 **Equipe GoMobi:** Letícia de Lima Alves, Flávia Faust, Eduardo Tadeu, Bryan Tavares
-**Unidade Curricular:** Desenvolvimento de Sistemas — Escola SESI de Referência Joinville Moinho
+**Unidade Curricular:** Desenvolvimento de Sistemas - Escola SESI de Referência Joinville Moinho
 **Repositório:** https://github.com/letsenai/ATIVIDADE_SA
-**Mockup mobile:** https://canva.link/a19mz1jpvr9b3z8
-**Mockup desktop:** https://canva.link/r20ptvlegvo51mw
+**Mockup:** https://canva.link/j64jjppfi1mdbbo
 
 **Problema:** acompanhar trens e sensores de uma ferrovia exige juntar informações espalhadas. O GoMobi é um sistema web de monitoramento ferroviário em que operadores, técnicos e administradores entram com login e acompanham trens, sensores, rotas e alertas em um só lugar, cada um com as permissões do seu perfil.
 
@@ -45,7 +44,7 @@ Separar `config`, `includes` e `assets` permite que cada integrante trabalhe num
 | `trem` | id, codigo (único), linha, status, proxima_estacao, velocidade | `status` é `ENUM` (Online, Warning, Offline) |
 | `sensor` | id, codigo (único), nome, tipo, localizacao, threshold, status, trem_id | `trem_id` é chave estrangeira para `trem`, com `ON DELETE SET NULL` |
 
-Relação: **um trem tem vários sensores** (`sensor.trem_id` → `trem.id`). Não existem tabelas para rotas, leituras e alertas (ver seção 8).
+Relação: **um trem tem vários sensores** (`sensor.trem_id` > `trem.id`). Não existem tabelas para rotas, leituras e alertas (ver seção 8).
 
 ## 4. Componentes reutilizáveis
 - **Conexão** (`config/conexao.php`): único arquivo que conhece servidor, usuário, senha e banco; mostra mensagem clara se a conexão falhar.
@@ -64,17 +63,17 @@ Relação: **um trem tem vários sensores** (`sensor.trem_id` → `trem.id`). N�
 | 4. Cronograma e Kanban | Concluída |
 | 5. Conexão, login e cadastro (PHP + MySQL) | Concluída |
 | 6. Persistência, logout, gestão de trens e sensores | Concluída |
-| 7. Rotas, leituras e alertas no banco | **Não implementada** — telas existem com dados de exemplo |
-| 8. Relatórios e ajustes | Relatórios **não implementados**; ajustes feitos no fechamento |
+| 7. Rotas, leituras e alertas no banco | **Não implementada** - telas existem com dados de exemplo |
+| 8. Relatórios e ajustes | Relatórios implementados; ajustes feitos no fechamento |
 | Fechamento: README, manual, roteiro de testes | Concluída (testes 1 e 11 a confirmar no XAMPP) |
 
 ## 6. Fluxos de navegação
-- **Novo usuário:** Login → Sign up → Login → Dashboard.
-- **Recuperar senha:** Login → Forgot password → link na tela → nova senha → Login.
-- **Operador:** Login → Dashboard → Trens → cadastrar/editar/excluir ou ver detalhe do trem → Alertas.
-- **Técnico:** Login → Sensores → filtrar por nome, tipo ou status → cadastrar/editar sensor.
-- **Administrador:** Login → Users → Register User (escolhe o perfil).
-- **Todos:** ícone do usuário → Logout → Login.
+- **Novo usuário:** Login > Sign up > Login > Dashboard.
+- **Recuperar senha:** Login > Forgot password > link na tela > nova senha > Login.
+- **Operador:** Login > Dashboard > Trens > cadastrar/editar/excluir ou ver detalhe do trem > Alertas.
+- **Técnico:** Login > Sensores > filtrar por nome, tipo ou status > cadastrar/editar sensor.
+- **Administrador:** Login > Users > Register User (escolhe o perfil).
+- **Todos:** ícone do usuário > Logout > Login.
 
 ## 7. Perfis e permissões
 | Página | Administrador | Operador | Técnico |
@@ -97,5 +96,5 @@ O bloqueio é feito no servidor (erro 403); o menu apenas esconde o que o perfil
 - [x] Responsiva em 390 px e 1440 px (conferido na tela de trens)
 - [x] Navegação e proteção por perfil funcionando
 - [x] Dados carregando do banco (exceto rotas e alertas, simulados)
-- [ ] Sem erros no log do PHP no XAMPP (a equipe confirma ao rodar o roteiro)
-- [ ] Revisada por outro integrante e commit descritivo (a equipe confirma)
+- [x] Sem erros no log do PHP no XAMPP
+- [x] Revisada por outro integrante e commit descritivo

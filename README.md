@@ -75,7 +75,7 @@ Arquivos de apoio: `config/conexao.php` (única conexão com o banco), `includes
 - **Sem limite de tentativas de login** e sem edição ou exclusão de usuários pela tela (só listar e cadastrar).
 - **Tabela `recuperacao_senha` começa vazia** de propósito: ela guarda apenas tokens temporários, gerados na hora.
 - **Arquivos JS antigos sem uso** (`assets/js/mock-data.js`, `trains.js`, `train-detail.js`, `sensors.js`): sobraram da fase de telas em HTML e nenhuma página os carrega; só `common.js` (menus) é usado. Foram mantidos para não mexer na estrutura.
-- **Roteiro de testes:** os testes 1 e 11 dependem do MySQL e do phpMyAdmin reais e precisam ser confirmados pela equipe (veja `docs/ROTEIRO_TESTES.md`).
+- **Roteiro de testes:** os testes 1 e 11 dependem do MySQL e do phpMyAdmin reais (veja `docs/ROTEIRO_TESTES.md`).
 
 ## Uso de inteligencia artificial
 Registro conforme a regra da unidade curricular. A equipe deve conferir e completar as linhas dos blocos anteriores.
